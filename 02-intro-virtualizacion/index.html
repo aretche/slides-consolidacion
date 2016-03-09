@@ -103,24 +103,24 @@
         <section>
             <section>
                 <h2>Virtualizar Hardware x86</h2>
-                <img src="img/x86_architecture.png" alt="Hardware x86" style="float: left; padding-left: 1em; width: 300px;"/>
+                <img src="img/x86_architecture.png" alt="Hardware x86" style="float: left; width: 250px;"/>
                 <br /><br />
-                <ul style="margin: 0; padding: 0;">
-                    <li>x86 tiene cuatro niveles de privilegios <br /> (conocidos como anillos TCB).</li>
-                    <li>El S.O. se espera que corra en el anillo 0 <br /> (donde tiene acceso directo al hardware).</li>
-                    <li>Las aplicaciones de usuario corren en el anillo 3 <br /> (donde tienen pocos privilegios).</li>
+                <ul style="float: right; margin: 0; padding: 0; font-size: 0.8em; width: 20em;">
+                    <li>x86 tiene cuatro niveles de privilegios (conocidos como anillos TCB).</li>
+                    <li>El S.O. se espera que corra en el anillo 0 (donde tiene acceso directo al hardware).</li>
+                    <li>Las aplicaciones de usuario corren en el anillo 3 (donde tienen pocos privilegios).</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Virtualizar Hardware x86 (cont.)</h2>
-                <img src="img/x86_architecture_virtualized.png" alt="Hardware x86" style="float: left; padding-left: 1em; width: 300px;"/>
+                <img src="img/x86_architecture_virtualized.png" alt="Hardware x86" style="float: left; width: 250px;"/>
                 <br /><br />
-                <ul style="margin: 0; padding: 0;">
-                    <li>Debido a que el hypervisor necesita acceso al hardware <br />
-                        y se ubica debajo del S.O, ocupa el anillo 0 y desplaza <br />
+                <ul style="float: right; margin: 0; padding: 0; font-size: 0.8em; width: 20em;">
+                    <li>Debido a que el hypervisor necesita acceso al hardware
+                        y se ubica debajo del S.O, ocupa el anillo 0 y desplaza
                         hacia arriba al Sistema Operativo.</li>
-                    <li>El sistema operativo espera correr en el anillo 0, <br /> pero se encuentra en el 1...</li>
+                    <li>El sistema operativo espera correr en el anillo 0, pero se encuentra en el 1...</li>
                 </ul>
             </section>
         </section>
@@ -139,10 +139,10 @@
 
             <section>
                 <h2>Virtualización Completa</h2>
-                <img src="img/virtualizacion_completa.jpg" alt="Virtualizacion completa" style="float: left; padding-left: 1em; width: 300px;"/>
+                <img src="img/virtualizacion_completa.jpg" alt="Virtualizacion completa" style="float: left; padding-left: 1em; width: 250px;"/>
                 <br /><br />
-                <ul style="margin: 0; padding: 0;">
-                    <li>El hypervisor emula todo el hardware subyacente <br /> (CPU, Memoria, E/S, Periféricos).</li>
+                <ul style="float: right; margin: 0; padding: 0; font-size: 0.8em; width: 20em;">
+                    <li>El hypervisor emula todo el hardware subyacente (CPU, Memoria, E/S, Periféricos).</li>
                     <li>Traducción de binarios / Ejecución directa.</li>
                     <li>Permite correr S.O. sin modificaciones.</li>
                 </ul>
@@ -151,26 +151,26 @@
 
             <section>
                 <h2>Paravirtualización</h2>
-                <img src="img/paravirtualizacion.jpg" alt="Paravirtualización" style="float: left; padding-left: 1em; width: 300px;"/>
+                <img src="img/paravirtualizacion.jpg" alt="Paravirtualización" style="float: left; padding-left: 1em; width: 250px;"/>
                 <br />
-                <ul style="margin: 0; padding: 0;">
+                <ul style="float: right; margin: 0; padding: 0; font-size: 0.8em; width: 20em;">
                     <li>Se modifica el kernel del guest para ejecutarse en el hypervisor.</li>
-                    <li>El kernel del guest convierte las operaciones <br /> no virtualizables en "hyper-llamadas".</li>
-                    <li>El hypervisor ejecuta las operaciones no virtualizables <br /> en nombre del kernel del guest.</li>
-                    <li>Al ser necesario modificar el kernel del guest, <br /> soporta guests con S.O. Open Source.</li>
+                    <li>El kernel del guest convierte las operaciones no virtualizables en "hyper-llamadas".</li>
+                    <li>El hypervisor ejecuta las operaciones no virtualizables en nombre del kernel del guest.</li>
+                    <li>Al ser necesario modificar el kernel del guest, soporta guests con S.O. Open Source.</li>
                 </ul>
                 <br /><br />
             </section>
 
             <section>
                 <h2>Virtualización Asistida por el S.O.</h2>
-                <img src="img/virtualizacion_asistida_por_so.jpg" alt="Virtualización Asistida por el S.O." style="float: left; padding-left: 1em; width: 300px;"/>
+                <img src="img/virtualizacion_asistida_por_so.jpg" alt="Virtualización Asistida por el S.O." style="float: left; padding-left: 1em; width: 250px;"/>
                 <br />
-                <ul style="margin: 0; padding: 0;">
+                <ul style="float: right; margin: 0; padding: 0; font-size: 0.8em; width: 20em;">
                     <li>Permite crear VPSs (virtual private servers) o "containers".</li>
                     <li>Se aprovecha del diseño de los S.O. Unix y Linux.</li>
-                    <li>Los S.O. guest tienen su propio root FS pero <br /> comparten el mismo kernel.</li>
-                    <li>El S.O. del guest tiene que ser compatible <br /> con el kernel compartido.</li>
+                    <li>Los S.O. guest tienen su propio root FS pero comparten el mismo kernel.</li>
+                    <li>El S.O. del guest tiene que ser compatible con el kernel compartido.</li>
                 </ul>
                 <br /><br /><br />
             </section>
@@ -179,7 +179,7 @@
                 <h2>Virtualización Asistida por Hardware</h2>
                 <ul class="fragment fade-in">
                     <li>Hace uso de las extensiones de virtualización del hardware</li>
-                    <ul>
+                    <ul style="font-size: 0.8em;">
                         <li>Procesador</li>
                         <ul>
                             <li>AMD Virtualization (AMD-V)</li>
@@ -202,7 +202,7 @@
 
             <section>
                 <h2>Implentaciones de Virtualización de la CPU</h2>
-                <ul>
+                <ul style="font-size: 0.8em;">
                     <li class="fragment fade-in">Virtualización Completa</li>
                     <ul class="fragment fade-in">
                         <li>Open Source: Qemu, VirtualBox</li>
@@ -210,7 +210,7 @@
                     </ul>
                     <li class="fragment fade-in">Virtualización Asistida por el S.O.</li>
                     <ul class="fragment fade-in">
-                        <li>Open Source: Linux VServer, FreeVPS, OpenVZ</li>
+                        <li>Open Source: LxC, OpenVZ, Linux VServer</li>
                         <li>Comerciales: Parallels (Virtuozzo), Solaris Zones and Containers</li>
                     </ul>
                     <li class="fragment fade-in">Paravirtualización</li>
